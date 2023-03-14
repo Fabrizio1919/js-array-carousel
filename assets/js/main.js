@@ -29,8 +29,12 @@ const slideImagesElements = document.querySelectorAll('.slider > .images > img')
 const nextEl = document.querySelector('.prev')
 nextEl.addEventListener('click', function () {
     console.log('cliccato prev');
-    console.log(slideImagesElements); 
+    console.log(slideImagesElements);
+// Seleziono currentSlide e loggo in console
+    const currentSlide = slideImagesElements[activeImage]
+    console.log(currentSlide);
 
+    
 
 
 })
@@ -39,7 +43,12 @@ nextEl.addEventListener('click', function () {
 const prevEl = document.querySelector('.next')
 prevEl.addEventListener('click', function () {
     console.log('cliccato next');
-    console.log(slideImagesElements); 
+    console.log(slideImagesElements);
+// Seleziono currentSlide e loggo in cosole
+    const currentSlide = slideImagesElements[activeImage]
+    console.log(currentSlide);
+
+   
 
 })
 
