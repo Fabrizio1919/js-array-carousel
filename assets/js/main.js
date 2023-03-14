@@ -26,30 +26,35 @@ for (let i = 0; i < images.length; i++) {
 // Seleziono slider
 const slideImagesElements = document.querySelectorAll('.slider > .images > img')
 // clic sul button Prev
-const nextEl = document.querySelector('.prev')
+const nextEl = document.querySelector('.next')
 nextEl.addEventListener('click', function () {
-    console.log('cliccato prev');
+    console.log('cliccato next');
     console.log(slideImagesElements);
-// Seleziono currentSlide e loggo in console
+    // Seleziono currentSlide e loggo in console
     const currentSlide = slideImagesElements[activeImage]
     console.log(currentSlide);
-
-    
-
+    currentSlide.classList.remove('active')
+    activeImage++
+    slideImagesElements[activeImage].classList.add('active')
+    const nextImage = slideImagesElements[activeImage]
+    console.log(nextImage);
+    nextImage.classList.add('active')
 
 })
 
 // clic sul button Next
-const prevEl = document.querySelector('.next')
+const prevEl = document.querySelector('.prev')
 prevEl.addEventListener('click', function () {
-    console.log('cliccato next');
+    console.log('cliccato prev');
     console.log(slideImagesElements);
-// Seleziono currentSlide e loggo in cosole
+    // Seleziono currentSlide e loggo in cosole
     const currentSlide = slideImagesElements[activeImage]
     console.log(currentSlide);
-
-   
-
+    currentSlide.classList.remove('active')
+    activeImage--
+    const nextImage = slideImagesElements[activeImage]
+    console.log(nextImage);
+    nextImage.classList.add('active')
 })
 
 
